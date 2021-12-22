@@ -9,7 +9,7 @@ nest_asyncio.apply()
 
 console = Console()
 
-#Code taken from: https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066
+#Code adapted from: https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066
 
 def get_image_urls(path):
     images = []

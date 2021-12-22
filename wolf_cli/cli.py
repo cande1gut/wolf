@@ -2,7 +2,7 @@ import click
 from .commands import urls
 from .commands import images
 
-@click.group(help="CLI tool to manage full development cycle of projects")
+@click.group(help="CLI tool to assist and make easy repetitive tasks such as downloading images and unshortening URLs")
 def cli():
     pass
 
