@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/wolf-cli.svg)](https://badge.fury.io/py/wolf-cli)
+[![PyPi version](https://badgen.net/pypi/v/pip/)](https://pypi.com/project/wolf-cli)
 
 # **Wolf**
 ## A CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening
