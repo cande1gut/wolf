@@ -1,7 +1,7 @@
 [![PyPI version](https://badge.fury.io/py/wolf-cli.svg)](https://badge.fury.io/py/wolf-cli)
 
 # **Wolf**
-## Wolf is a CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening
+## A CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening
 
 ### Built with:
 - [Poetry](https://python-poetry.org/)
