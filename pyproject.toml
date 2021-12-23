@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wolf-cli"
-version = "0.1.2"
+version = "0.1.1"
 description = "CLI tool to assist and make easy repetitive tasks such as downloading images and unshortening URLs"
 authors = ["cande1gut <candelario.gtz@gmail.com>"]
 repository = 'https://github.com/cande1gut/wolf'
@@ -13,6 +13,7 @@ click = "^8.0.3"
 anyio = "^3.4.0"
 httpx = "^0.21.1"
 rich = "^10.16.1"
+typer = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -20,3 +21,6 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+wolf = 'wolf_cli.cli'

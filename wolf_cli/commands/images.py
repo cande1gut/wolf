@@ -1,5 +1,6 @@
-import click
+import typer
 from pathlib import Path
+from typing import Optional
 import anyio
 import httpx
 from rich.console import Console
@@ -7,9 +8,11 @@ from rich.progress import Progress, TaskID
 import nest_asyncio
 nest_asyncio.apply()
 
+images_app = typer.Typer()
+
 console = Console()
 
-#Code adapted from: https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066
+#Images retrieval code adapted from: https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066
 
 def get_image_urls(path):
     images = []
@@ -30,7 +33,7 @@ async def download_image(progress, task_id, image_url, destination):
             progress.update(task_id, advance=1)
             return
 
-        path = Path(destination+"/"+image_url.split('/')[-1])
+        path = destination / (image_url.split('/')[-1])
         path.write_bytes(response.content)
         progress.update(task_id, advance=1)
 
@@ -40,24 +43,22 @@ async def worker(image_urls, progress, task_id, destination):
         for image_url in image_urls:
             await tg.spawn(download_image, progress, task_id, image_url, destination)
 
-@click.command(name="images")
-@click.option(
-    "--in",
-    "in_file",
-    required=True,
-    help="Path of text file with a url per line",
-    type=click.Path(exists=True, dir_okay=False, readable=True),
-)
-@click.option(
-    "--out-folder",
-    "out_folder",
-    required=True,
-    help="Folder to where the images will be stored",
-    type=click.Path(exists=True, dir_okay=True),
-)
-def getImgs(in_file, out_folder):
-    image_urls = get_image_urls(in_file)
-    with Progress(console=console) as progress:
-        task_id = progress.add_task('Downloading', total=len(image_urls))
-        anyio.run(worker, image_urls, progress, task_id, out_folder)
-    console.print('All images downloaded!')
+@images_app.command()
+def get_images(input_file: Optional[Path] = typer.Option(..., help="Text file containing all URLs splited by line"), output_folder: Optional[Path] = typer.Option(..., help="Folder path where the images will be stored")):
+    """
+    Get all images from a text file (in Async mode)
+    """
+    if input_file is None:
+        typer.echo("URLs text file not found!")
+        raise typer.Abort()
+
+    if not output_folder.is_dir():
+        typer.echo("Folder not found!")
+        raise typer.Abort()
+
+    if input_file.is_file() and output_folder.is_dir():
+        image_urls = get_image_urls(input_file)
+        with Progress(console=console) as progress:
+            task_id = progress.add_task('Downloading', total=len(image_urls))
+            anyio.run(worker, image_urls, progress, task_id, output_folder)
+        console.print('All images downloaded!')

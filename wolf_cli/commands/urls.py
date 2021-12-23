@@ -1,5 +1,6 @@
-import click
+import typer
 from pathlib import Path
+from typing import Optional
 import anyio
 import httpx
 from rich.console import Console
@@ -7,6 +8,10 @@ from rich.progress import Progress, TaskID
 import json
 import nest_asyncio
 nest_asyncio.apply()
+
+urls_app = typer.Typer()
+
+#URLs retrieval code inspired from: https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066
 
 console = Console()
 all_urls = []
@@ -50,32 +55,24 @@ async def worker(urls, progress, task_id):
         for url in urls:
             await tg.spawn(unshorten_url, progress, task_id, url)
 
-@click.command(name="urls")
-@click.option(
-    "--in",
-    "in_file",
-    required=True,
-    help="Path of text file with a url per line",
-    type=click.Path(exists=True, dir_okay=False, readable=True),
-)
-@click.option(
-    "--out-folder",
-    "out_folder",
-    required=True,
-    help="Folder to where the result will be stored (If not created, it will be done automatically)",
-    type=click.Path(exists=True, dir_okay=True),
-)
-@click.option(
-    "--out-name",
-    "out_name",
-    required=True,
-    help="Name of output file",
-)
-def getURLs(in_file, out_folder, out_name):
-    urls = get_urls(in_file)
-    with Progress(console=console) as progress:
-        task_id = progress.add_task('Downloading', total=len(urls))
-        anyio.run(worker, urls, progress, task_id)
-    console.print('All urls unshortened!')
-    with open(out_folder+"/"+out_name+".json", "w") as file:
-        json.dump(all_urls, file, indent=4)
+@urls_app.command()
+def unshorten_urls(input_file: Optional[Path] = typer.Option(..., help="Text file containing all URLs splited by line"), output_folder: Optional[Path] = typer.Option(..., help="Folder path where the images will be stored"), output_name: str = typer.Option(..., help="File name that will be used to store the unshortened URLs")):
+    """
+    Get all unshortened URLs from a text file (in Async mode)
+    """
+    if input_file is None:
+        typer.echo("URLs text file not found!")
+        raise typer.Abort()
+
+    if not output_folder.is_dir():
+        typer.echo("Folder not found!")
+        raise typer.Abort()
+
+    if input_file.is_file() and output_folder.is_dir() and output_name != "":
+        urls = get_urls(input_file)
+        with Progress(console=console) as progress:
+            task_id = progress.add_task('Downloading', total=len(urls))
+            anyio.run(worker, urls, progress, task_id)
+        console.print('All urls unshortened!')
+        with open(output_folder / (output_name+".json"), "w") as file:
+            json.dump(all_urls, file, indent=2)
