@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "wolf-cli"
 version = "0.1.1"
-description = "CLI tool to assist and make easy repetitive tasks such as downloading images and unshortening URLs"
+description = "CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening"
 authors = ["cande1gut <candelario.gtz@gmail.com>"]
 repository = 'https://github.com/cande1gut/wolf'
 readme = 'README.md'

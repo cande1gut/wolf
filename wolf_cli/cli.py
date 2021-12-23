@@ -2,7 +2,7 @@ import typer
 from .commands import urls
 from .commands import images
 
-app = typer.Typer(help="CLI tool to assist and make easy repetitive tasks such as downloading images and unshortening URLs")
+app = typer.Typer(help="CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening")
 urls = urls.urls_app
 images = images.images_app
 
