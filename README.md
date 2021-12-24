@@ -2,8 +2,8 @@
 
 # **Wolf**
 
-<p align="center">
-  <img style="background-color:gold!important;border-radius:10px!important;padding:20px!important;" src="https://github.com/cande1gut/wolf/blob/main/dist/logo/logo.svg" />
+<p align="center" style="background-color:gold;border-radius:10px;padding:20px;>
+  <img src="https://github.com/cande1gut/wolf/blob/main/dist/logo/logo.svg" />
 </p>
 
 ## A CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening
