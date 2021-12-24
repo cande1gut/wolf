@@ -2,7 +2,7 @@
 
 # **Wolf**
 
-<div style="width:150px; height:100px">
+<div style="background-color:gold;">
   <p align="center">
     <img src="https://github.com/cande1gut/wolf/blob/main/dist/logo/logo.svg" />
   </p>
