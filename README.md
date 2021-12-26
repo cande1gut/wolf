@@ -11,7 +11,7 @@
 ### A CLI tool to assist and make easy useful tasks for:
 - Images
 - URLs
-- Stock market
+- Stock-market
 
 ### Built with:
 - [Poetry](https://python-poetry.org/)
