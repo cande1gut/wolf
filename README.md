@@ -3,7 +3,7 @@
 # **Wolf**
 
  <p align="center">
-  <img src="https://github.com/cande1gut/wolf/blob/main/dist/logo/logo.svg" />
+  <img src="https://github.com/cande1gut/wolf/blob/main/dist/logo/logo.png" />
  </p>
 
 ## A CLI tool to assist and make easy repetitive tasks such as downloading images and URLs unshortening
