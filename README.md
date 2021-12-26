@@ -6,18 +6,18 @@
   <img src="https://github.com/cande1gut/wolf/blob/main/dist/assets/logo.svg" style="width:200px;"/>
  </p>
 
-## A CLI tool to assist and make easy developers' tasks
+A CLI tool to assist and make easy developers' tasks
 - Images
 - URLs
 - Stock market
 
 ---
-## Roadmap:
+> Roadmap:
 - [x] Images download
 - [x] URLs unshortening
 - [ ] Real-time stock market data
 
-### Built with:
+> Built with:
 - [Poetry](https://python-poetry.org/)
 - [Typer](https://typer.tiangolo.com/)
 ---
