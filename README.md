@@ -25,4 +25,5 @@
 - [x] Async URLs unshortening
 - [ ] URLs domain analysis
 - [ ] Real-time stock-market data stream
+- [x] Get an updated symbol ticker price
 - [ ] Stock-market analysis
