@@ -8,7 +8,7 @@
 
 ---
 
-### A CLI tool to assist and make easy useful tasks for:
+### A CLI tool to assist and make easy to work with:
 - Images
 - URLs
 - Stock-market
