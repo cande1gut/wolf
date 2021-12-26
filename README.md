@@ -20,7 +20,7 @@
 ---
 
 ### Roadmap:
-- [x] Async images download (code adapted from [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066))
+- [x] Async images download (Code adapted from [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066))
 - [ ] Image analysis (Objects, OCR, faces)
 - [x] Async URLs unshortening
 - [ ] URLs domain analysis
