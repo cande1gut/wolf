@@ -6,6 +6,8 @@
   <img src="https://github.com/cande1gut/wolf/blob/main/dist/assets/logo.svg" style="width:200px;"/>
  </p>
 
+---
+
 ### A CLI tool to assist and make easy developers' tasks
 - Images
 - URLs
