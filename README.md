@@ -8,7 +8,7 @@
 
 ---
 
-### A CLI tool to assist and make easy developers' tasks
+### A CLI tool to assist and make easy useful tasks for:
 - Images
 - URLs
 - Stock market
@@ -18,9 +18,12 @@
 - [Typer](https://typer.tiangolo.com/)
 
 ---
+
 > Roadmap:
-- [x] Images download
-- [x] URLs unshortening
-- [ ] Real-time stock market data
+- [x] Async images download
+- [x] Async URLs unshortening
+- [ ] Real-time stock market data stream
+
 ---
+
 This project has adapted code made by: [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
