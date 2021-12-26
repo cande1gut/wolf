@@ -12,4 +12,6 @@
 - [Poetry](https://python-poetry.org/)
 - [Typer](https://typer.tiangolo.com/)
 ---
-### This project has adapted code made by: [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
+<span style="font-size:4em;">
+ This project has adapted code made by: [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
+</span>
