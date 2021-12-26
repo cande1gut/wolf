@@ -21,8 +21,11 @@
 
 ### Roadmap:
 - [x] Async images download
+- [ ] Image analysis (Objects, OCR, faces)
 - [x] Async URLs unshortening
-- [ ] Real-time stock market data stream
+- [ ] URLs domain analysis
+- [ ] Real-time stock-market data stream
+- [ ] Stock-market analysis
 
 ---
 
