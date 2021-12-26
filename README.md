@@ -12,6 +12,6 @@
 - [Poetry](https://python-poetry.org/)
 - [Typer](https://typer.tiangolo.com/)
 ---
-<span style="font-size:4em;">
+<font size="5">
  This project has adapted code made by: [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
-</span>
+</font>
