@@ -16,6 +16,7 @@
 ### Built with:
 - [Poetry](https://python-poetry.org/)
 - [Typer](https://typer.tiangolo.com/)
+- [Yahoo-fin](http://theautomatic.net/yahoo_fin-documentation/)
 
 ---
 
