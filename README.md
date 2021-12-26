@@ -15,7 +15,7 @@
 ## Roadmap:
 - [x] Images download
 - [x] URLs unshortening
-- [] Real-time stock market data
+- [ ] Real-time stock market data
 
 ### Built with:
 - [Poetry](https://python-poetry.org/)
