@@ -29,4 +29,5 @@
 
 ---
 
-This project has code adapted from: [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
+This project has code adapted from: 
+- [Kevin Tewouda](https://lewoudar.medium.com/click-a-beautiful-python-library-to-write-cli-applications-9c8154847066)
